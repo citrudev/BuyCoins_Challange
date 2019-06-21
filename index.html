@@ -5,7 +5,25 @@
   <title>BuyCoins Challange</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
-    
+        var data = `{
+          hn {
+            topStories(limit:30) {
+              id,
+              url,
+              text,
+              title,
+              by {
+                id
+              },
+              time,
+              score,
+              descendants
+            }
+          }
+        }`
+    $.post('https://www.graphqlhub.com/playground', data, function (data, status) {
+        
+    })
   </script>
 </head>
 
